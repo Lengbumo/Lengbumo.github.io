@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+
+  
+
+  
+    <meta name="keywords" content="个人博客 逗比 中二少年 老二次猿了">
+  
+
+  
+    <meta name="author" content="lengbumo">
+  
+
+  
+
+  
+
+  <title>如何使用Hexo自建博客 | Lengbumo</title>
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcss.com/highlight.js/9.15.6/styles/monokai.min.css" rel="stylesheet">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body>
+  <div class="root-container">
+    <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          Lengbumo
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">关于</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    
+<!-- header container -->
+<header class="header-container post">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-image" style="background-image: url(http://qapo6pgc5.bkt.clouddn.com/image/banner-1.jpg)"></div>
+      <div class="post-text">
+        <div class="type-wrap">
+          <a class="article-category-link" href="/categories/%E8%87%AA%E5%BB%BA%E5%8D%9A%E5%AE%A2/">自建博客</a>
+        </div>
+        <h1 class="title-wrap">如何使用Hexo自建博客</h1>
+        <h2 class="title-sub-wrap">
+          <strong>lengbumo</strong>
+          <span>发布于</span>
+          
+  <a href="javascript:;" class="article-date">
+    <time datetime="2020-05-20T09:43:07.000Z" itemprop="datePublished">2020-05-20</time>
+  </a>
+
+        </h2>
+      </div>
+    </div>
+  
+
+  
+  
+
+  </header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+
+<div class="body-container">
+  <article class="content-container article-container">
+    <div class="article-content">
+      
+      
+
+      <section class="article-entry">
+        <p>作为一个程序员，一直有个自建博客的想法，但是作为拖延症晚期患者…<img src="http://qapo6pgc5.bkt.clouddn.com/meme/ndw.jpg" width="100px" height="100px" style="display: inline" /><br>在这个特殊的日子里，某只无事可做的单身狗终于下定决心要做点什么有意义的事情了。在参照了不少自建博客的文章后，just do it。<br>既然博客都搭好了，那就将搭建过程作为本博客的第一篇文章吧<br><img src="http://qapo6pgc5.bkt.clouddn.com/meme/xjd.gif" width="120px" height="120px" /></p>
+<h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><hr>
+<h5 id="一、Node安装及环境配置"><a href="#一、Node安装及环境配置" class="headerlink" title="一、Node安装及环境配置"></a>一、Node安装及环境配置</h5><p>因为我本地已经安装了Node,所以就不再赘述了(主要是懒),没有安装的朋友可以参考<a href="https://www.cnblogs.com/zhouyu2017/p/6485265.html" target="_blank" rel="noopener">这篇文章</a>，讲的还是蛮详细的</p>
+<h5 id="二、Hexo安装以及主题切换"><a href="#二、Hexo安装以及主题切换" class="headerlink" title="二、Hexo安装以及主题切换"></a>二、Hexo安装以及主题切换</h5><p>好了，有了node之后我们就可以开始进入主题了</p>
+<ol>
+<li><p>创建一个文件夹用来存放下载的Hexo,然后通过命令进入该文件夹下,我这里是用的是F:\myblog</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs groovy"><span class="hljs-string">C:</span>\Users\Administrator&gt;<span class="hljs-string">f:</span><br><span class="hljs-string">F:</span>\&gt;cd myblog<br><span class="hljs-string">F:</span>\myblog&gt;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>下载安装hexo模块</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span> hexo -g<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>初始化博客模块至当前文件夹</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo init blog</span><br></code></pre></td></tr></table></figure>
+
+<p>init blog是指将hexo下载到blog目录下，这里的blog你们可以自定义。可能有些人下载速度会比较慢，不要着急。</p>
+<p>结果成功如图所示:</p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot2.png" alt=""></p>
+</li>
+<li><p>加载需要模块</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">cd</span> <span class="hljs-string">blog</span><br><span class="hljs-attr">npm</span> <span class="hljs-string">install</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>运行Hexo</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs axapta">hexo <span class="hljs-keyword">server</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot3.png" alt=""></p>
+<p>根据提示在浏览器输入相应地址<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 就大功告成了</p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot4.png" alt=""></p>
+<p>如果提示4000端口被占用，可以使用以下语句来修改端口为5000或者自己定义的端口</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">hexo<span class="hljs-built_in"> server </span>-p 5000<br></code></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="6">
+<li><p>小结</p>
+<p>总的来说，就5步。</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">npm</span> <span class="hljs-string">install hexo -g</span><br><span class="hljs-attr">hexo</span> <span class="hljs-string">init blog</span><br><span class="hljs-attr">cd</span> <span class="hljs-string">blog</span><br><span class="hljs-attr">npm</span> <span class="hljs-string">install</span><br><span class="hljs-attr">hexo</span> <span class="hljs-string">server</span><br></code></pre></td></tr></table></figure>
+<p>怎么样，是不是超简单<img src="http://qapo6pgc5.bkt.clouddn.com/meme/666.gif" width="100px" height="100px" style="display: inline" /> 咳，基操勿六</p>
+</li>
+</ol>
+<h5 id="三、更换主题"><a href="#三、更换主题" class="headerlink" title="三、更换主题"></a>三、更换主题</h5><p>使用Ctrl+C停止Hexo服务，我们找到blog下的themes文件夹，这就是我们博客系统使用的主题了。本博客使用的是<a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener">flex-block</a>主题，当然你们也可以自己去选择自己喜欢的主题，推荐去<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题官网</a>查找</p>
+<ol>
+<li><p>找到喜欢的主题后，复制主题的GitHub地址，然后在themes目录下执行一下语句，将仓库复制到本地</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/xxxxx你复制的地址<br></code></pre></td></tr></table></figure>
+
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot12.png" alt=""></p>
+</li>
+<li><p>下载完之后，可以看到themes目录下多了一个文件夹，这个就是我们要用到的主题了</p>
+</li>
+<li><p>修改 _config.yml 配置文件</p>
+<p>进入blog文件夹下，找到根目录的_config.yml 配置文件</p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot9.png" alt=""></p>
+<p>找到theme配置，修改为你下载的文件夹名称</p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot13.png" alt=""></p>
+<p>修改博客title和作者等配置</p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot16.png" alt=""></p>
+</li>
+</ol>
+<ol start="4">
+<li><p>再次启动，看看效果</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs axapta">hexo <span class="hljs-keyword">server</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot15.png" alt=""></p>
+</li>
+<li><p>主题的具体配置修改可以参考下载的主题介绍README.md</p>
+<p>去找吧我把一切都放在那里了</p>
+</li>
+</ol>
+<h5 id="四、GitHub仓库-GitHub-Pages"><a href="#四、GitHub仓库-GitHub-Pages" class="headerlink" title="四、GitHub仓库(GitHub Pages)"></a>四、GitHub仓库(GitHub Pages)</h5><p>​    因为我们的博客是要托管到git上的，所以我们需要准备一个GitHub仓库</p>
+<ol>
+<li><p>没有账号的可以先去<a href="https://github.com/" target="_blank" rel="noopener">注册账号</a></p>
+</li>
+<li><p>创建仓库</p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot5.png" alt=""></p>
+</li>
+<li><p>仓库名称</p>
+<p>仓库名称为GitHub账户名+.github.io，如图所示</p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot7.png" alt=""></p>
+<p>这个地址 <a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a> 就是我们的博客地址了，username为你的GitHub账户名。</p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot8.png" alt=""></p>
+</li>
+<li><p>修改 _config.yml 文件</p>
+<p>进入blog文件夹下，找到根目录的_config.yml 配置文件</p>
+<p>找到文件下的deploy配置，改为如下，其中repo的地址是你刚刚创建的仓库地址，注意冒号后需要空格</p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot11.png" alt=""></p>
+</li>
+<li><p>安装git拓展</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">npm <span class="hljs-keyword">install</span> hexo-deployer-git <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot17.png" alt=""></p>
+</li>
+<li><p>将博客提交到仓库</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">hexo</span> clean   <span class="hljs-comment">#清空Hexo数据库和产生的文件</span><br>hexo d -g    <span class="hljs-comment">#部署到GitHub</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot19.png" alt=""></p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot18.png" alt=""></p>
+<p>这个时候，去我们的GitHub仓库看看，发现多了一堆文件,这些就是我们发布的博客了</p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot20.png" alt=""></p>
+</li>
+<li><p>访问博客</p>
+<p>重点来了，之前我们是在本地使用localhost:4000访问，现在发布到GitHub上后，就可以使用<a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a> 来访问了</p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot21.png" alt=""></p>
+</li>
+<li><p>发布博客</p>
+<p>搞定上面的一系列简(fan)单(suo)操作后，输入以下命令来创建文章</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gauss">hexo <span class="hljs-keyword">new</span> <span class="hljs-built_in">title</span>     <span class="hljs-meta">#title是新建的博文标题</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot22.png" alt=""></p>
+<p>找到提示生成的markdown文件，然后我们就可以开始愉快的写作了，推荐这款Markdown软件<a href="https://www.typora.io" target="_blank" rel="noopener">Typora</a>来编写，我觉得用的蛮顺手的。</p>
+<p>编写完之后还是之前的命令,就能将新写的文章发布上去了</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo d -g</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot21.1.png" alt=""></p>
+</li>
+</ol>
+<h5 id="五、绑定域名"><a href="#五、绑定域名" class="headerlink" title="五、绑定域名"></a>五、绑定域名</h5><p>如果你觉得<a href="https://username.github.io" target="_blank" rel="noopener">https://username.github.io</a> 这种域名太low不符合咱的身份的话，那就可以继续看下去了。</p>
+<ol>
+<li><p>购买域名</p>
+<p>没错，这里开始需要花钱了Orz</p>
+<img src="http://qapo6pgc5.bkt.clouddn.com/meme/qb.jpg" width="100px" height="100px" />
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>拥有自己的域名后，在域名控制界面点击解析添加解析设置</p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot23.png" alt=""></p>
+<p><img src="http://qapo6pgc5.bkt.clouddn.com/blog/0520/screenshot24.png" alt=""></p>
+</li>
+<li><p>新建CNAME文件</p>
+<p>在blog\source目录下，新建一个CNAME文件，文件内容为你的域名，然后再次使用语句提交博客到仓库.这样就可以使用自己的域名来访问博客了</p>
+</li>
+</ol>
+<h5 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h5><p>好了，终于写完了，完结撒花<br><img src="http://qapo6pgc5.bkt.clouddn.com/meme/cy.jpg" width="100px" height="100px" /><br>岂可修，没想到写个博客居然这么累，还好没有立什么每日一更的flag，机智如我。<br><img src="http://qapo6pgc5.bkt.clouddn.com/meme/zbx.jpg" width="100px" height="100px" /><br>好吧，到这基本就完结了，虽然还留了许多坑，等我多研究下Hexo后咱再回来继续更。咕德拜</p>
+
+      </section>
+
+      <section class="article-footer">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">#Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="tag">#个人博客</a></li></ul>
+      </section>
+
+      <section class="article-navs">
+        
+      </section>
+
+      
+
+  
+  
+  <div class="valine-container">
+    <div id="valine_thread" class="valine-thread"></div>
+  </div>
+  
+
+  
+  
+
+
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons social-icons-footer">
+      <a href="https://github.com/Lengbumo/" target="_blank" rel="noopener noreferrer">
+  <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+  </svg>
+</a>    </div>
+    
+    <p>&copy; 2020 <a href="/" target="_blank">lengbumo</a></p>
+
+    
+      <p id="hitokoto"></p>
+      <script src="https://v1.hitokoto.cn/?c=a&amp;encode=js&select=%23hitokoto" defer></script>
+    
+
+    
+
+    <!--  <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p> -->
+  </div>
+</footer>
+
+  </div>
+
+  <div class="back-to-top-fixed">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+  <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+  <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+</svg> 
+  </div>
+
+  
+  
+<!-- valine 评论 start -->
+<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script type="text/javascript">
+  new Valine({
+    el: "#valine_thread",
+    appId: "oD8edKRmkhmSiAjSnRRjv7mn-gzGzoHsz",
+    appKey: "LN420cglLqbkbz622gYOk67A",
+    avatar: "mm",
+    placeholder: "随便说点什么叭～",
+    notify: false,
+    visitor: false,
+    recordIP: true,
+    pageSize: 10,
+  });
+</script>
+<!-- valine 评论 end -->
+
+
+
+
+  <!-- aplayer 音频 start -->
+  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+  <script type="text/javascript" src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <script type="text/javascript">
+    const aplayer = document.querySelectorAll(".aplayer");
+    aplayer && initaplayer(aplayer);
+    function initaplayer(els) {
+      let elsArr = Array.from(els);
+      elsArr.forEach(el => {
+        new APlayer({
+          container: el,
+          audio: { ...el.dataset },
+          theme: "#b7daff",
+          lrcType: 3,
+          autoplay: false,
+          loop: false,
+          mutex: true,
+        });
+      });
+    }
+  </script>
+  <!-- aplayer 音频 end -->
+  
+
+<!-- dplayer 视频 start -->
+<script type="text/javascript" src="https://unpkg.com/dplayer@1.25.1/dist/DPlayer.min.js"></script>
+<script type="text/javascript">
+  const dplayer = document.querySelectorAll(".dplayer");
+  dplayer && initDPlayer(dplayer);
+  function initDPlayer(els) {
+    let elsArr = Array.from(els);
+    elsArr.forEach(el => {
+      let url = el.dataset.url;
+      let cover = el.dataset.cover;
+      let subtitle = el.dataset.subtitle;
+
+      let options = {
+        container: el,
+        video: { url: url, pic: cover },
+        theme: "#b7daff",
+        autoplay: false,
+        loop: false,
+        mutex: true,
+      }
+
+      if (subtitle) {
+        options.subtitle = {
+          url: el.dataset.subtitle,
+        }
+      }
+      new DPlayer(options);
+    });
+  }
+</script>
+<!-- dplayer 视频 end -->
+
+
+<!-- waterfall 瀑布流 start -->
+
+<script src="/lib/waterfall.min.js"></script>
+
+<script type="text/javascript">
+
+const waterfalls = document.querySelectorAll(".waterfall-container");
+
+if (waterfalls && waterfalls.length > 0) {
+  waterfalls.forEach((waterfall, index) => {
+    let cls = "waterfall-container-" + index;
+    waterfall.classList.add(cls);
+    initWaterfall(cls, waterfall);
+  });
+}
+
+function initWaterfall(selector, el) {
+  const options = {};
+  if (Object.keys(el.dataset).length > 0) {
+    for (let k in el.dataset) {
+      options[k] = el.dataset[k];
+    }
+  }
+  waterfall(`.${selector}`, options);
+}
+</script>
+<!-- waterfall 瀑布流 end -->
+
+
+  <!-- zoom start -->
+  
+<script src="/lib/zoom.min.js"></script>
+
+  <script type="text/javascript">
+    document.querySelector(".article-content") && zoom(".article-content");
+  </script>
+  <!-- zoom end -->
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+
+</body>
+</html>
